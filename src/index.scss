@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Merienda',sans-serif;
+  font-family: 'Merienda', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,9 +24,33 @@ header {
     &_header {
       font-weight: 700;
       font-size: 40px;
-      line-height: 58px;
+      line-height: 0px;
       text-align: center;
       color: #FFFFFF;
+    }
+
+    &_subheader {
+      margin-top: 20px;
+      font-size: 24px;
+      text-align: center;
+
+      color: #fff;
+    }
+
+    &_logo {
+      display: flex;
+      justify-content: space-between;
+      margin: 35px auto 30px auto;
+      width: 200px;
+      height: 30px;
+
+      &_divider {
+        margin-top: 16px;
+        width: 60px;
+        height: 1px;
+        border: 1px solid #FFFFFF;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+      }
     }
   }
 }
@@ -40,12 +64,27 @@ nav {
   position: absolute;
   top: 30px;
   left: 150px;
+
   ul {
     display: flex;
     justify-content: space-between;
     width: 355px;
     height: 40px;
     list-style-type: none;
+
+    li {
+      .logo_img {
+        position: absolute;
+        top: 48px;
+        left: 45px;
+
+        img {
+          position: absolute;
+          left: -36px;
+          top: -48px;
+        }
+      }
+    }
 
     a {
       text-decoration: none;
@@ -56,7 +95,5 @@ nav {
     }
   }
 
-  .logo_img {
-    background-image: url(./img/bg/Group.png);
-  }
+
 }
