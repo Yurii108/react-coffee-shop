@@ -15,10 +15,16 @@ body {
   width: 1440px;
 }
 
-header {
+.header {
   min-height: 640px;
   background: url(./img/bg/desk-bg.png) center (center / cover) no-repeat;
   padding: 180px 0 200px 0;
+
+  &__nav {
+    position: absolute;
+    top: 30px;
+    left: 150px;
+  }
 
   .main {
     &_header {
@@ -33,7 +39,6 @@ header {
       margin-top: 20px;
       font-size: 24px;
       text-align: center;
-
       color: #fff;
     }
 
@@ -52,19 +57,26 @@ header {
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
       }
     }
+
+    &_button {
+      display: block;
+      margin: 18px auto 0 auto;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0);
+      cursor: pointer;
+      width: 120px;
+      height: 30px;
+      font-family: 'Merienda';
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      color: #FFFFFF;
+    }
   }
 }
 
-// .nav_main {
-//   position: relative;
-//   top: 30px;
-// }
-
 nav {
-  position: absolute;
-  top: 30px;
-  left: 150px;
-
   ul {
     display: flex;
     justify-content: space-between;
@@ -88,12 +100,47 @@ nav {
 
     a {
       text-decoration: none;
-      font-size: 12px;
+      font-size: 13px;
       line-height: 17px;
       color: #FFFFFF;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
+}
 
+.logo {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto 0px auto;
+  width: 200px;
+  height: 30px;
 
+  &_divider {
+    margin-top: 16px;
+    width: 60px;
+    height: 1px;
+    border: 1px solid #000000;
+  }
+}
+
+.about {
+  padding-top: 80px;
+  min-height: 520px;
+
+  &__subheader {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__descr {
+    display: block;
+    margin: 40px auto 100px auto;
+    width: 590px;
+    height: 222px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  } 
 }
