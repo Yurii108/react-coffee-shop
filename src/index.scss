@@ -11,10 +11,6 @@ body {
   box-sizing: border-box;
 }
 
-.wrapper {
-  width: 1440px;
-}
-
 .header {
   min-height: 640px;
   background: url(./img/bg/desk-bg.png) center (center / cover) no-repeat;
@@ -142,5 +138,49 @@ nav {
     font-size: 14px;
     line-height: 20px;
     text-align: center;
-  } 
+  }
+}
+
+.best {
+  padding: 80px 0 110px 0;
+  min-height: 495px;
+  background: url(./img/bg/desk-bg-2.png) center center/cover no-repeat;
+
+  &__subheader {
+    text-align: center;
+    margin: 0;
+  }
+
+  &__all-products {
+    width: 800px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+
+}
+
+.product {
+  position: relative;
+  padding: 22px 21px;
+  width: 220px;
+  height: 240px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 8px;
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  b {
+    position: absolute;
+    right: 21px;
+    bottom: 19px;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }

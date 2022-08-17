@@ -54,6 +54,29 @@ function App() {
           repair day ladies now.</p>
       </section>
 
+      <section className='best'>
+        <h2 className="subheader best__subheader">Our best</h2>
+        
+        <div className="best__all-products">
+          <div className="product best__product">
+            <img src='./img/out-best/b-1.png' alt="product-1" />
+            <p>Solimo Coffee Beans 2 kg</p>
+            <b>10.73$</b>
+          </div>
+          <div className="product best__product">
+            <img src='./img/out-best/b-2.png' alt="product-1" />
+            <p>Presto Coffee Beans 1 kg</p>
+            <b>15.99$</b>
+          </div>
+          <div className="product best__product">
+            <img src='./img/out-best/b-3.png' alt="product-1" />
+            <p>AROMISTICO Coffee 1 kg</p>
+            <b>6.99$</b>
+          </div>
+        </div>
+
+
+      </section>
 
 
     </div>
