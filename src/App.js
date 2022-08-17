@@ -22,11 +22,11 @@ function App() {
               <div className="logo_img">
                 <img src={require('./img/bg/coffee-beans-white.svg').default} alt='logo' />
               </div>
-              <a href="https://www.facebook.com/profile.php?id=100013564327758">Coffee house
+              <a href="https://www.facebook.com/">Coffee house
               </a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=100013564327758">Our coffee
+            <li><a href="https://www.facebook.com/">Our coffee
             </a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=100013564327758">For your pleasure
+            <li><a href="https://www.facebook.com/">For your pleasure
             </a></li>
           </ul>
         </nav>
@@ -56,27 +56,54 @@ function App() {
 
       <section className='best'>
         <h2 className="subheader best__subheader">Our best</h2>
-        
+
         <div className="best__all-products">
           <div className="product best__product">
             <img src='./img/out-best/b-1.png' alt="product-1" />
             <p>Solimo Coffee Beans 2 kg</p>
             <b>10.73$</b>
+            <button className='product__button' >+</button>
+            
           </div>
           <div className="product best__product">
             <img src='./img/out-best/b-2.png' alt="product-1" />
             <p>Presto Coffee Beans 1 kg</p>
             <b>15.99$</b>
+            <button className='product__button' >+</button>
           </div>
           <div className="product best__product">
             <img src='./img/out-best/b-3.png' alt="product-1" />
             <p>AROMISTICO Coffee 1 kg</p>
             <b>6.99$</b>
+            <button className='product__button' >+</button>
           </div>
         </div>
-
-
       </section>
+
+      <footer className='footer'>
+        <div className="nav-wrraper">
+          <nav className='nav footer__nav'>
+            <ul>
+              <li>
+                <div className="logo_img">
+                  <img src={require('./img/bg/coffee-beans-black.svg').default} alt='logo' />
+                </div>
+                <a href="https://www.facebook.com/">Coffee house
+                </a></li>
+              <li><a href="https://www.facebook.com/">Our coffee
+              </a></li>
+              <li><a href="https://www.facebook.com/">For your pleasure
+              </a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div className="logo footer__logo">
+          <div className="logo_divider"></div>
+          <div className="logo_img"><img src={require('./img/bg/coffee-beans-black-sec.svg').default} alt='logo' /></div>
+          <div className="logo_divider"></div>
+        </div>
+      </footer>
 
 
     </div>
