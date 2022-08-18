@@ -1,15 +1,6 @@
-import Cards from './components/Cards';
-import Footer from './components/Footer';
-import HeaderMain from './components/Header-main';
-
-function App() {
-  return (
-    <div className="wrapper">
-      <header className='header'>
-       <HeaderMain />
-      </header>
-
-      <section className='about'>
+function MainDescSection (){
+return (
+    <>
         <h2 className="subheader about__subheader">About Us</h2>
         <div className="logo about__logo">
           <div className="logo_divider"></div>
@@ -29,35 +20,8 @@ function App() {
           horrible but confined day end marriage. Eagerness furniture set preserved far
           recommend. Did even but nor are most gave hope. Secure active living depend son
           repair day ladies now.</p>
-      </section>
-
-      <section className='best'>
-        <h2 className="subheader best__subheader">Our best</h2>
-
-        <div className="best__all-products">
-          <Cards />
-          <div className="product best__product">
-            <img src='/img/out-best/b-2.png' alt="product-1" />
-            <p>Presto Coffee Beans 1 kg</p>
-            <b>15.99$</b>
-            <button className='product__button' >+</button>
-          </div>
-          <div className="product best__product">
-            <img src='/img/out-best/b-3.png' alt="product-1" />
-            <p>AROMISTICO Coffee 1 kg</p>
-            <b>6.99$</b>
-            <button className='product__button' >+</button>
-          </div>
-        </div>
-      </section>
-
-      <footer className='footer'>
-        <Footer />
-      </footer>
-
-
-    </div>
-  );
+          </>
+    )
 }
 
-export default App;
+export default MainDescSection;
