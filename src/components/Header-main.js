@@ -1,7 +1,7 @@
 function HeaderMain() {
     return (
         <>
-            <div className="main">
+            <div className="main" style={{display: 'none'}}>
                 <h1 className="main_header">Everything You Love About Coffee</h1>
                 <div className="main_logo">
                     <div className="main_logo_divider"></div>

@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <>
+        <footer className='footer' style={{display: 'none'}}>
             <div className="footer-nav-wrraper">
                 <nav className='nav footer__nav'>
                     <ul>
@@ -23,7 +23,7 @@ function Footer() {
                 <div className="logo_img"><img src='/img/bg/coffee-beans-black-sec.svg' alt='logo' /></div>
                 <div className="logo_divider"></div>
             </div>
-        </>
+        </footer>
     )
 }
 

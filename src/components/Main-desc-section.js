@@ -1,6 +1,6 @@
 function MainDescSection() {
   return (
-    <section className='about'>
+    <section className='about' style={{display: 'none'}}>
       <h2 className="subheader about__subheader">About Us</h2>
       <div className="logo about__logo">
         <div className="logo_divider"></div>

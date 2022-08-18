@@ -11,11 +11,23 @@ body {
   box-sizing: border-box;
 }
 
-.header {
-  min-height: 640px;
-  background: url(./img/bg/desk-bg.png) center (center / cover) no-repeat;
-  padding: 180px 0 200px 0;
+.header-our-coffee {
+  min-height: 260px;
+  background: url(./img/bg/desk-bg-3.png) center (center / cover) no-repeat;
+  padding: 160px 0 84px 0;
 
+  &__title {
+    display: block;
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 0px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+
+.header {
   &__nav {
     position: absolute;
     top: 30px;
@@ -23,6 +35,10 @@ body {
   }
 
   .main {
+    min-height: 640px;
+    background: url(./img/bg/desk-bg.png) center (center / cover) no-repeat;
+    padding: 180px 0 200px 0;
+
     &_header {
       font-weight: 700;
       font-size: 40px;
@@ -102,7 +118,7 @@ nav {
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       transition: all .2s;
 
-  
+
     }
   }
 }
