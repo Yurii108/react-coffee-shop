@@ -1,3 +1,6 @@
+import styleCards from './carts.module.scss'
+
+console.log(styleCards);
 
 function Cards(props) {
   return (
