@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer className='footer' style={{display: 'none'}}>
+        <footer className='footer'>
             <div className="footer-nav-wrraper">
                 <nav className='nav footer__nav'>
                     <ul>
