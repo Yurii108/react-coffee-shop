@@ -22,7 +22,11 @@ const productsMore = [
   { title: 'AROMISTICO Coffee 1 kg', prise: 6.99, img: '/img/out-best/b-3.png' },
 ]
 
+
+
+
 function App() {
+
   return (
     <div className="wrapper">
       <header className='header' >
@@ -80,18 +84,22 @@ function App() {
             <button className="button">Columbia</button>
           </div>
         </div>
-        
+
+
         <div className="shops__products" >
-        {productsMore.map((obj) => (
-            <Cards title={obj.title} prise={obj.prise} img={obj.img} />
+          {productsMore.map((obj) => (
+            <Cards title={obj.title}
+              prise={obj.prise}
+              img={obj.img}
+            />
           ))}
         </div>
-        
+
       </section>
 
       <MainDescSection />
 
-      <section className='best' style={{display: 'none'}}>
+      <section className='best' style={{ display: 'none' }}>
         <h2 className="subheader best__subheader">Our best</h2>
         <div className="best__all-products" >
           {products.map((obj) => (

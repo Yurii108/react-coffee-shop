@@ -1,7 +1,7 @@
 function HeaderMain() {
     return (
         <>
-            <div className="main" style={{display: 'none'}}>
+            <div className="main" style={{ display: 'none' }}>
                 <h1 className="main_header">Everything You Love About Coffee</h1>
                 <div className="main_logo">
                     <div className="main_logo_divider"></div>
@@ -19,12 +19,10 @@ function HeaderMain() {
                         <div className="logo_img">
                             <img src='./img/bg/coffee-beans-white.svg' alt='logo' />
                         </div>
-                        <a href="https://www.facebook.com/">Coffee house
-                        </a></li>
-                    <li><a href="https://www.facebook.com/">Our coffee
-                    </a></li>
-                    <li><a href="https://www.facebook.com/">For your pleasure
-                    </a></li>
+                        <span>Coffee house</span>
+                    </li>
+                    <li><span>Our coffee</span></li>
+                    <li><span>For your pleasure</span></li>
                 </ul>
             </nav>
         </>

@@ -8,12 +8,10 @@ function Footer() {
                             <div className="logo_img">
                                 <img src='/img/bg/coffee-beans-black.svg' alt='logo' />
                             </div>
-                            <a href="https://www.facebook.com/">Coffee house
-                            </a></li>
-                        <li><a href="https://www.facebook.com/">Our coffee
-                        </a></li>
-                        <li><a href="https://www.facebook.com/">For your pleasure
-                        </a></li>
+                            <span>Coffee house</span>
+                    </li>
+                    <li><span>Our coffee</span></li>
+                    <li><span>For your pleasure</span></li>
                     </ul>
                 </nav>
             </div>
