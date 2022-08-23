@@ -26,8 +26,8 @@ body {
 
   .wrapper__search {
     display: grid;
-    grid-template: 30px / 285px 335px;
-    column-gap: 80px;
+    grid-template: 30px / 285px 335px 200px;
+    column-gap: 40px;
     justify-content: center;
     margin: 60px auto 0 auto;
   }
@@ -73,7 +73,16 @@ body {
       &:hover {
         box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.45);
       }
+    } 
+  }
+
+  &__shopping {
+    span {
+      font-size: 15px;
+      line-height: 20px;
     }
+
+
   }
 
   &__products {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Cards from './components/Cards';
 import Footer from './components/Footer';
@@ -7,36 +7,39 @@ import MainDescSection from './components/Main-desc-section';
 import HeaderOurCoffee from './components/Header-our-coffee';
 import Goods from './components/goods';
 
-
-
-
 const products = [
   { title: 'Solimo Coffee Beans 2 kg', prise: 10.73, img: '/img/out-best/b-1.png' },
   { title: 'Presto Coffee Beans 1 kg', prise: 15.99, img: '/img/out-best/b-2.png' },
   { title: 'AROMISTICO Coffee 1 kg', prise: 6.99, img: '/img/out-best/b-3.png' },
 ]
 
-const productsMore = [
-  { title: 'Solimo Coffee Beans 2 kg', prise: 10.73, img: '/img/out-best/b-1.png' },
-  { title: 'Presto Coffee Beans 1 kg', prise: 15.99, img: '/img/out-best/b-2.png' },
-  { title: 'AROMISTICO Coffee 1 kg', prise: 6.99, img: '/img/out-best/b-3.png' },
-  { title: 'Solimo Coffee Beans 2 kg', prise: 10.73, img: '/img/out-best/b-1.png' },
-  { title: 'Presto Coffee Beans 1 kg', prise: 15.99, img: '/img/out-best/b-2.png' },
-  { title: 'AROMISTICO Coffee 1 kg', prise: 6.99, img: '/img/out-best/b-3.png' },
-]
-
-
-
 
 function App() {
 
-const [HeaderOurCoffeeOpened, setOpened] = useState(false);
+  const [HeaderOurCoffeeOpened, setOpened] = useState(true);
+  const [items, setItems] = useState([]);
+
+  const onClickOurCoffee = () => {
+    setOpened(true)
+  }
+
+  useEffect(() => {
+    fetch('https://6304aa4694b8c58fd7225d37.mockapi.io/items')
+      .then((response) => {
+        return response.json();
+      })
+      .then((json) => {
+        setItems(json);
+      });
+  }, [])
 
 
   return (
+
+
     <div className="wrapper">
       <header className='header' >
-        <HeaderMain onClickNav={() => setOpened(true)}/>
+        <HeaderMain onClickNav={() => onClickOurCoffee()} />
         {HeaderOurCoffeeOpened && <HeaderOurCoffee />}
       </header>
 
@@ -59,11 +62,17 @@ const [HeaderOurCoffeeOpened, setOpened] = useState(false);
             <button className="button">Kenya</button>
             <button className="button">Columbia</button>
           </div>
+
+          <div className="shops__shopping">
+            <span>🛒</span>
+            <span>Shopping</span>
+            <b>1000$</b>
+          </div>
         </div>
 
 
         <div className="shops__products" >
-          {productsMore.map((obj) => (
+          {items.map((obj) => (
             <Cards title={obj.title}
               prise={obj.prise}
               img={obj.img}
@@ -75,7 +84,7 @@ const [HeaderOurCoffeeOpened, setOpened] = useState(false);
 
       <MainDescSection />
 
-      <section className='best' style={{ display: 'none'}}>
+      <section className='best' style={{ display: 'none' }}>
         <h2 className="subheader best__subheader">Our best</h2>
         <div className="best__all-products" >
           {products.map((obj) => (

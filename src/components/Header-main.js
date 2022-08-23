@@ -1,6 +1,7 @@
-function HeaderMain(props) {
-console.log(props);
 
+
+
+function HeaderMain({onClickNav}) {
 
     return (
         <>
@@ -22,9 +23,9 @@ console.log(props);
                         <div className="logo_img">
                             <img src='./img/bg/coffee-beans-white.svg' alt='logo' />
                         </div>
-                        <span onClick={props.onClickNav}>Coffee house</span>
+                        <span>Coffee house</span>
                     </li>
-                    <li><span onClick={props.onClickNav}>Our coffee</span></li>
+                    <li><span onClick={onClickNav} >Our coffee</span></li>
                     <li><span>For your pleasure</span></li>
                 </ul>
             </nav>
