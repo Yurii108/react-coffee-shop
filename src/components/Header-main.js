@@ -1,4 +1,7 @@
-function HeaderMain() {
+function HeaderMain(props) {
+console.log(props);
+
+
     return (
         <>
             <div className="main" style={{ display: 'none' }}>
@@ -19,9 +22,9 @@ function HeaderMain() {
                         <div className="logo_img">
                             <img src='./img/bg/coffee-beans-white.svg' alt='logo' />
                         </div>
-                        <span>Coffee house</span>
+                        <span onClick={props.onClickNav}>Coffee house</span>
                     </li>
-                    <li><span>Our coffee</span></li>
+                    <li><span onClick={props.onClickNav}>Our coffee</span></li>
                     <li><span>For your pleasure</span></li>
                 </ul>
             </nav>

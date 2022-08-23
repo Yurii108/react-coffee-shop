@@ -14,7 +14,7 @@ function Cards(props) {
   }
 
   return (
-    <div className={styleCards.product}>
+    <div className={styleCards.product} >
       <div className={styleCards.img_product}>
         <img src={props.img} alt="product-1" />
       </div>
