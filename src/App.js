@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import Cards from './components/Cards';
 import Footer from './components/Footer';
 import HeaderMain from './components/Header-main';
 import MainDescSection from './components/Main-desc-section';
 import HeaderOurCoffee from './components/Header-our-coffee';
-import Goods from './components/goods';
+import Goods from './components/Goods';
+import Shops from './components/Shops';
+import OurBest from './components/Our-best';
 
 const products = [
   { title: 'Solimo Coffee Beans 2 kg', prise: 10.73, img: '/img/out-best/b-1.png' },
@@ -35,66 +36,18 @@ function App() {
 
 
   return (
-
-
-    <div className="wrapper">
-      <header className='header' >
-        <HeaderMain onClickNav={() => onClickOurCoffee()} />
-        {HeaderOurCoffeeOpened && <HeaderOurCoffee />}
-      </header>
+    <>
+      <HeaderMain onClickNav={() => onClickOurCoffee()} />
+      {HeaderOurCoffeeOpened && <HeaderOurCoffee />}
 
       <Goods />
-
-      <section className='shops' style={{ display: '' }}>
-        <div className="divider shops__divider"></div>
-
-        <div className="wrapper__search">
-          <div className="shops__search">
-            <form >
-              <label htmlFor="text">Lookiing for</label>
-              <input type="text" placeholder='start typing here...' />
-            </form>
-          </div>
-
-          <div className="shops__button">
-            <span>Or filter</span>
-            <button className="button">Brazil</button>
-            <button className="button">Kenya</button>
-            <button className="button">Columbia</button>
-          </div>
-
-          <div className="shops__shopping">
-            <span>🛒</span>
-            <span>Shopping</span>
-            <b>1000$</b>
-          </div>
-        </div>
-
-
-        <div className="shops__products" >
-          {items.map((obj) => (
-            <Cards title={obj.title}
-              prise={obj.prise}
-              img={obj.img}
-            />
-          ))}
-        </div>
-
-      </section>
-
       <MainDescSection />
-
-      <section className='best' style={{ display: 'none' }}>
-        <h2 className="subheader best__subheader">Our best</h2>
-        <div className="best__all-products" >
-          {products.map((obj) => (
-            <Cards title={obj.title} prise={obj.prise} img={obj.img} />
-          ))}
-        </div>
-      </section>
+      
+      <Shops items={items} />
+      <OurBest products={products} />
 
       <Footer />
-    </div>
+    </>
   );
 }
 

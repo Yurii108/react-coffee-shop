@@ -1,13 +1,13 @@
 import styleHeader from './header-our-coffee.module.scss'
 
-console.log(styleHeader);
-
 function HeaderOurCoffee() {
     return (
         <>
-            <div className={styleHeader.header_our_coffee} style={{ display: '' }}>
-                <h2 className={styleHeader.header_our_coffee__title}>Our Coffee</h2>
-            </div>
+            <header className='header'>
+                <div className={styleHeader.header_our_coffee} style={{ display: '' }}>
+                    <h2 className={styleHeader.header_our_coffee__title}>Our Coffee</h2>
+                </div>
+            </header>
         </>
     )
 }

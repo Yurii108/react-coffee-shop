@@ -1,3 +1,5 @@
+import './goods.scss'
+
 
 function Goods() {
 return (

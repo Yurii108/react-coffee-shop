@@ -5,7 +5,8 @@ function HeaderMain({onClickNav}) {
 
     return (
         <>
-            <div className="main" style={{ display: 'none' }}>
+        <header className='header' >
+            <div className="main" style={{ display: 'nane' }}>
                 <h1 className="main_header">Everything You Love About Coffee</h1>
                 <div className="main_logo">
                     <div className="main_logo_divider"></div>
@@ -29,7 +30,9 @@ function HeaderMain({onClickNav}) {
                     <li><span>For your pleasure</span></li>
                 </ul>
             </nav>
+            </header>
         </>
+        
     )
 }
 
