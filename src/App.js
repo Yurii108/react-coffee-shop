@@ -7,6 +7,7 @@ import HeaderOurCoffee from './components/Header-our-coffee';
 import Goods from './components/Goods';
 import Shops from './components/Shops';
 import OurBest from './components/Our-best';
+import NavMenu from './components/Nav-menu';
 
 const products = [
   { title: 'Solimo Coffee Beans 2 kg', prise: 10.73, img: '/img/out-best/b-1.png' },
@@ -17,11 +18,18 @@ const products = [
 
 function App() {
 
-  const [HeaderOurCoffeeOpened, setOpened] = useState(true);
+  const [HeaderOurCoffeeOpened, setOpenedS] = useState(false);
+  const [HeaderMainOpened, setOpenedF] = useState(true);
   const [items, setItems] = useState([]);
 
   const onClickOurCoffee = () => {
-    setOpened(true)
+    setOpenedS(true)
+    setOpenedF(false)
+  }
+
+  const onHeaderMain = () => {
+    setOpenedF(true)
+    setOpenedS(false)
   }
 
   useEffect(() => {
@@ -37,14 +45,16 @@ function App() {
 
   return (
     <>
-      <HeaderMain onClickNav={() => onClickOurCoffee()} />
+      <NavMenu onClickS={() => onClickOurCoffee()} onClickF={() => onHeaderMain()} />
+
+      {HeaderMainOpened && <HeaderMain />}
       {HeaderOurCoffeeOpened && <HeaderOurCoffee />}
 
-      <Goods />
-      <MainDescSection />
-      
-      <Shops items={items} />
-      <OurBest products={products} />
+      {HeaderOurCoffeeOpened && <Goods />}
+      {HeaderMainOpened && <MainDescSection />}
+
+      {HeaderOurCoffeeOpened && <Shops items={items} />}
+      {HeaderMainOpened && <OurBest products={products} />}
 
       <Footer />
     </>

@@ -18,18 +18,7 @@ function HeaderMain({onClickNav}) {
                 <button className='main_button'>More</button>
             </div>
 
-            <nav className='nav header__nav'>
-                <ul>
-                    <li>
-                        <div className="logo_img">
-                            <img src='./img/bg/coffee-beans-white.svg' alt='logo' />
-                        </div>
-                        <span>Coffee house</span>
-                    </li>
-                    <li><span onClick={onClickNav} >Our coffee</span></li>
-                    <li><span>For your pleasure</span></li>
-                </ul>
-            </nav>
+           
             </header>
         </>
         
