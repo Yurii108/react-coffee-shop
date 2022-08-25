@@ -9,19 +9,14 @@ import Shops from './components/Shops';
 import OurBest from './components/Our-best';
 import NavMenu from './components/Nav-menu';
 
-const products = [
-  { title: 'Solimo Coffee Beans 2 kg', prise: 10.73, img: '/img/out-best/b-1.png' },
-  { title: 'Presto Coffee Beans 1 kg', prise: 15.99, img: '/img/out-best/b-2.png' },
-  { title: 'AROMISTICO Coffee 1 kg', prise: 6.99, img: '/img/out-best/b-3.png' },
-]
 
 const items = [
-  { title: 'Solimo Coffee Beans 2 kg', prise: 10.73, id: 1, img: '/img/out-best/b-1.png' },
-  { title: 'Presto Coffee Beans 1 kg', prise: 15.99, id: 2, img: '/img/out-best/b-2.png' },
-  { title: 'AROMISTICO Coffee 1 kg', prise: 6.99, id: 3, img: '/img/out-best/b-3.png' },
-  { title: 'Solimo Coffee Beans 2 kg', prise: 10.73, id: 4, img: '/img/out-best/b-1.png' },
-  { title: 'Presto Coffee Beans 1 kg', prise: 15.99, id: 5, img: '/img/out-best/b-2.png' },
-  { title: 'AROMISTICO Coffee 1 kg', prise: 6.99, id: 6, img: '/img/out-best/b-3.png' }
+  { title: 'Solimo Coffee Beans 2 kg', prise: 10.73, img: '/img/out-best/b-1.png', id: 1 },
+  { title: 'Presto Coffee Beans 1 kg', prise: 15.99, img: '/img/out-best/b-2.png', id: 2 },
+  { title: 'AROMISTICO Coffee 1 kg', prise: 6.99, img: '/img/out-best/b-3.png', id: 3 },
+  { title: 'Solimo Coffee Beans 2 kg', prise: 10.73, img: '/img/out-best/b-1.png', id: 4 },
+  { title: 'Presto Coffee Beans 1 kg', prise: 15.99, img: '/img/out-best/b-2.png', id: 5 },
+  { title: 'AROMISTICO Coffee 1 kg', prise: 6.99, img: '/img/out-best/b-3.png', id: 6 }
 ]
 
 
@@ -64,7 +59,7 @@ function App() {
 
       {HeaderOurCoffeeOpened && <Shops 
       items={items} />}
-      {HeaderMainOpened && <OurBest products={products} />}
+      {HeaderMainOpened && <OurBest />}
 
       <Footer />
     </>

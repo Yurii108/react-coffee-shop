@@ -2,9 +2,20 @@ import style from './shops.module.scss';
 
 import Cards from "../Cards";
 
-function Shops({items}) {
-    return (
+function Shops({ items }) {
 
+    const elements = items.map((obj) => {
+        const { id, ...items } = obj;
+
+
+        return (
+            <Cards
+                key={id} {...items}
+            />
+        )
+    });
+
+    return (
         <section className={style.shops} style={{ display: '' }}>
             <div className={style.shops__divider}></div>
 
@@ -32,12 +43,7 @@ function Shops({items}) {
 
 
             <div className={style.shops__products} >
-                {items.map((obj) => (
-                    <Cards title={obj.title}
-                        prise={obj.prise}
-                        img={obj.img}
-                    />
-                ))}
+                {elements}
             </div>
 
         </section>

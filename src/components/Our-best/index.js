@@ -1,13 +1,13 @@
-import Cards from "../Cards";
+// import Cards from "../Cards";
 
-function OurBest({products}) {
+function OurBest() {
+
+
     return (
         <section className='best' style={{ display: '' }}>
             <h2 className="subheader best__subheader">Our best</h2>
             <div className="best__all-products" >
-                {products.map((obj) => (
-                    <Cards title={obj.title} prise={obj.prise} img={obj.img} />
-                ))}
+                {/* Area for cards */}
             </div>
         </section>
     )

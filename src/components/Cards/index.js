@@ -22,7 +22,9 @@ function Cards(props) {
       <span>Brazil</span>
       <b>{prise}$</b>
       <button 
-      className={isActive ? styleCards.product__button_active : styleCards.product__button}onClick={onClickPlus}>{isActive ? '✓' : '+'}</button>
+      className={isActive ? styleCards.product__button_active : styleCards.product__button}onClick={onClickPlus}>{isActive ? '✓' : '+'}
+      
+      </button>
     </div>
   )
 }
