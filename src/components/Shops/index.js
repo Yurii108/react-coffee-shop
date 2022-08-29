@@ -2,16 +2,15 @@ import style from './shops.module.scss';
 
 import Cards from "../Cards";
 
-function Shops({ items }) {
+const Shops = ({ data, onToggleShopping }) => {
 
-    const elements = items.map((obj) => {
-        const { id, ...items } = obj;
-
+    const elements = data.map(item => {
+        const { id, ...itemsProps } = item;
 
         return (
             <Cards
-                key={id} {...items}
-            />
+                key={id} {...itemsProps}
+                onToggleShopping={() => onToggleShopping(id)}/>
         )
     });
 

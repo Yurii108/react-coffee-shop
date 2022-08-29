@@ -1,29 +1,25 @@
-import { useState } from 'react';
 
-import styleCards from './carts.module.scss'
+import './carts.scss'
 
 
 function Cards(props) {
-  
-  const {img, title, prise} = props;
-  
-  const [isActive, setIsAdd] = useState(false);
 
-  const onClickPlus = () => {
-    setIsAdd(!isActive);
-  }
+  const { img, title, prise, onToggleShopping } = props;
 
   return (
-    <div className={styleCards.product} >
-      <div className={styleCards.img_product}>
+    <div className="product" >
+      <div className="img_product">
         <img src={img} alt="product-1" />
       </div>
       <p>{title}</p>
       <span>Brazil</span>
       <b>{prise}$</b>
-      <button 
-      className={isActive ? styleCards.product__button_active : styleCards.product__button}onClick={onClickPlus}>{isActive ? '✓' : '+'}
-      
+      <button
+        className="product__button" 
+        onClick={onToggleShopping}>+
+          
+          {/* {onToggleShopping ? '✓' : '+'} */}
+
       </button>
     </div>
   )
