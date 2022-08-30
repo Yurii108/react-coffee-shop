@@ -8,7 +8,7 @@ import Goods from './components/Goods';
 import Shops from './components/Shops';
 import OurBest from './components/Our-best';
 import NavMenu from './components/Nav-menu';
-import Search from './components/search';
+
 
 
 
@@ -79,7 +79,7 @@ class App extends Component {
   render() {
     const { data, term, HeaderMainOpened, HeaderOurCoffeeOpened } = this.state;
     const visibleData = this.searchProduct(data, term)
-    const search = <Search onUpdateSeach={this.onUpdateSeach} />
+
 
     return (
       <>
@@ -94,7 +94,7 @@ class App extends Component {
         {HeaderOurCoffeeOpened && <Shops
           data={visibleData}
           onToggleShopping={this.onToggleShopping}
-          search={search}
+          onUpdateSeach={this.onUpdateSeach}
         />}
         {HeaderMainOpened && <OurBest />}
 

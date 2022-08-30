@@ -1,31 +1,32 @@
 import style from './shops.module.scss';
 
+import Search from '../Search';
 import Cards from "../Cards";
 
 
-const Shops = ({ data, onToggleShopping, search }) => {
-    
+const Shops = ({ data, onToggleShopping, onUpdateSeach }) => {
+
     const elements = data.map(item => {
         const { id, ...itemsProps } = item;
 
         return (
             <Cards
                 key={id} {...itemsProps}
-                onToggleShopping={() => onToggleShopping(id)}/>
+                onToggleShopping={() => onToggleShopping(id)} />
         )
     });
-    
-    
-    
+
+
+
 
     return (
-    
+
         <section className={style.shops} style={{ display: '' }}>
             <div className={style.shops__divider}></div>
 
             <div className={style.wrapper__search}>
                 <div className={style.shops__search}>
-                   {search}
+                    <Search onUpdateSeach={onUpdateSeach} />
                 </div>
 
                 <div className={style.shops__button}>
