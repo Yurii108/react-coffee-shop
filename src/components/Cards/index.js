@@ -4,7 +4,13 @@ import './carts.scss'
 
 function Cards(props) {
 
-  const { img, title, prise, onToggleShopping } = props;
+  const { img, title, prise, onToggleShopping, buy } = props;
+
+  let active = 'product__button';
+
+  if (buy) {
+    active += '_active'
+  }
 
   return (
     <div className="product" >
@@ -15,11 +21,9 @@ function Cards(props) {
       <span>Brazil</span>
       <b>{prise}$</b>
       <button
-        className="product__button" 
-        onClick={onToggleShopping}>+
-          
-          {/* {onToggleShopping ? '✓' : '+'} */}
-
+        className={active}
+        onClick={onToggleShopping}>
+        {buy ? '✓' : '+'}
       </button>
     </div>
   )

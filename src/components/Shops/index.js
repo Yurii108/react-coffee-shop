@@ -2,8 +2,9 @@ import style from './shops.module.scss';
 
 import Cards from "../Cards";
 
-const Shops = ({ data, onToggleShopping }) => {
 
+const Shops = ({ data, onToggleShopping, search }) => {
+    
     const elements = data.map(item => {
         const { id, ...itemsProps } = item;
 
@@ -13,17 +14,18 @@ const Shops = ({ data, onToggleShopping }) => {
                 onToggleShopping={() => onToggleShopping(id)}/>
         )
     });
+    
+    
+    
 
     return (
+    
         <section className={style.shops} style={{ display: '' }}>
             <div className={style.shops__divider}></div>
 
             <div className={style.wrapper__search}>
                 <div className={style.shops__search}>
-                    <form >
-                        <label htmlFor="text">Lookiing for</label>
-                        <input type="text" placeholder='start typing here...' />
-                    </form>
+                   {search}
                 </div>
 
                 <div className={style.shops__button}>
