@@ -4,7 +4,7 @@ import Search from '../Search';
 import Cards from "../Cards";
 
 
-const Shops = ({ data, onToggleShopping, onUpdateSeach }) => {
+const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket }) => {
 
     const elements = data.map(item => {
         const { id, ...itemsProps } = item;
@@ -38,8 +38,8 @@ const Shops = ({ data, onToggleShopping, onUpdateSeach }) => {
 
                 <div className={style.shops__shopping}>
                     <span>🛒</span>
-                    <span>Shopping</span>
-                    <b>1000$</b>
+                    <span>Shopping </span>
+                    <b>{shopingBucket} $</b>
                 </div>
             </div>
 

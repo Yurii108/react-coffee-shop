@@ -67,7 +67,7 @@ class App extends Component {
     }
 
     return items.filter(item => {
-      return item.title.indexOf(term) > -1
+      return item.title.toLowerCase().indexOf(term) > -1
     })
   }
 
@@ -79,6 +79,8 @@ class App extends Component {
   render() {
     const { data, term, HeaderMainOpened, HeaderOurCoffeeOpened } = this.state;
     const visibleData = this.searchProduct(data, term)
+    let shopingBucket = data.filter(item => item.buy)
+    .reduce((sum, item) => sum + item.prise,0);
 
 
     return (
@@ -95,6 +97,7 @@ class App extends Component {
           data={visibleData}
           onToggleShopping={this.onToggleShopping}
           onUpdateSeach={this.onUpdateSeach}
+          shopingBucket={shopingBucket}
         />}
         {HeaderMainOpened && <OurBest />}
 
