@@ -4,7 +4,7 @@ import Search from '../Search';
 import Cards from "../Cards";
 
 
-const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateFilter }) => {
+const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateFilter, filter }) => {
 
     const elements = data.map(item => {
         const { id, ...itemsProps } = item;
@@ -25,11 +25,12 @@ const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateF
     ]
 
     const buttons = buttonsData.map(({name, lable}) => {
-    
+        const active = filter === name;
+        const activeOn = active ? "shops__button_item_active" : "shops__button_item"
         return (
             <button 
             type='button'
-            className="button"
+            className={`shops__button_item ${activeOn}`}
             key={name}
             onClick={() => onUpdateFilter(name)}
             >{lable}</button>

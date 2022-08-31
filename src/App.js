@@ -27,7 +27,6 @@ class App extends Component {
     shoping: 0,
     term: '',
     filter: 'all'
-
   }
 
 
@@ -121,7 +120,7 @@ class App extends Component {
           onToggleShopping={this.onToggleShopping}
           onUpdateSeach={this.onUpdateSeach}
           shopingBucket={shopingBucket}
-          // filter={filter}
+          filter={filter}
           onUpdateFilter={this.onUpdateFilter}
         />}
         {HeaderMainOpened && <OurBest />}
