@@ -1,4 +1,4 @@
-import style from './shops.module.scss';
+import './shops.scss';
 
 import Search from '../Search';
 import Cards from "../Cards";
@@ -40,15 +40,15 @@ const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateF
 
     return (
 
-        <section className={style.shops} style={{ display: '' }}>
-            <div className={style.shops__divider}></div>
+        <section className="shops" style={{ display: '' }}>
+            <div className="shops__divider"></div>
 
-            <div className={style.wrapper__search}>
-                <div className={style.shops__search}>
+            <div className="wrapper__search">
+                <div className="shops__search">
                     <Search onUpdateSeach={onUpdateSeach} />
                 </div>
 
-                <div className={style.shops__button}>
+                <div className="shops__button">
                     <span>Or filter</span>
                     {buttons}
                     {/* <button className="button">All coffee</button>
@@ -58,7 +58,7 @@ const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateF
                     
                 </div>
 
-                <div className={style.shops__shopping}>
+                <div className="shops__shopping">
                     <span>🛒</span>
                     {/* <button>Shopping </button> */}
                     <b>{shopingBucket} $</b>
@@ -66,7 +66,7 @@ const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateF
             </div>
 
 
-            <div className={style.shops__products} >
+            <div className="shops__products" >
                 {elements}
             </div>
 
