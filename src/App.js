@@ -103,7 +103,7 @@ class App extends Component {
     const { data, term, filter, HeaderMainOpened, HeaderOurCoffeeOpened } = this.state;
     const visibleData = this.filterProduct(this.searchProduct(data, term), filter)
     const shopingBucket = data.filter(item => item.buy)
-      .reduce((sum, item) => sum + item.prise, 0);
+      .reduce((sum, item) => sum + item.prise, 0) + ' $';
 
     return (
       <>

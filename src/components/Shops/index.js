@@ -1,10 +1,12 @@
 import './shops.scss';
 
+
 import Search from '../Search';
 import Cards from "../Cards";
 
 
 const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateFilter, filter }) => {
+
 
     const elements = data.map(item => {
         const { id, ...itemsProps } = item;
@@ -17,11 +19,11 @@ const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateF
     });
 
     const buttonsData = [
-        { name: 'all', lable: 'all coffee' },
+        { name: 'all', lable: 'all' },
         { name: 'brazil', lable: 'Brazil' },
         { name: 'kenya', lable: 'Kenya' },
         { name: 'сolumbia', lable: 'Columbia' },
-        { name: 'shopping', lable: 'Shopping' }
+        { name: 'shopping', lable: `${shopingBucket}` }
     ]
 
     const buttons = buttonsData.map(({name, lable}) => {
@@ -60,8 +62,8 @@ const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateF
 
                 <div className="shops__shopping">
                     <span>🛒</span>
-                    {buttonsShopping}
-                    <b>{shopingBucket} $</b>
+                    
+                    <b>{buttonsShopping}</b>
                 </div>
             </div>
 
