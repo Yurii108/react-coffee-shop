@@ -37,6 +37,10 @@ const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateF
             )
     })
 
+    const buttonsFilter = buttons.slice(0, 4)
+    const buttonsShopping = buttons.slice(4)
+  
+
 
 
     return (
@@ -51,17 +55,12 @@ const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateF
 
                 <div className="shops__button">
                     <span>Or filter</span>
-                    {buttons}
-                    {/* <button className="button">All coffee</button>
-                    <button className="button">Brazil</button>
-                    <button className="button">Kenya</button>
-                    <button className="button">Columbia</button> */}
-                    
+                    {buttonsFilter}
                 </div>
 
                 <div className="shops__shopping">
                     <span>🛒</span>
-                    {/* <button>Shopping </button> */}
+                    {buttonsShopping}
                     <b>{shopingBucket} $</b>
                 </div>
             </div>
