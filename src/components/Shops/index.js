@@ -4,7 +4,7 @@ import Search from '../Search';
 import Cards from "../Cards";
 
 
-const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket }) => {
+const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateFilter }) => {
 
     const elements = data.map(item => {
         const { id, ...itemsProps } = item;
@@ -16,6 +16,25 @@ const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket }) => {
         )
     });
 
+    const buttonsData = [
+        { name: 'all', lable: 'all coffee' },
+        { name: 'brazil', lable: 'Brazil' },
+        { name: 'kenya', lable: 'Kenya' },
+        { name: 'сolumbia', lable: 'Columbia' },
+        { name: 'shopping', lable: 'Shopping' }
+    ]
+
+    const buttons = buttonsData.map(({name, lable}) => {
+    
+        return (
+            <button 
+            type='button'
+            className="button"
+            key={name}
+            onClick={() => onUpdateFilter(name)}
+            >{lable}</button>
+            )
+    })
 
 
 
@@ -31,14 +50,17 @@ const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket }) => {
 
                 <div className={style.shops__button}>
                     <span>Or filter</span>
+                    {buttons}
+                    {/* <button className="button">All coffee</button>
                     <button className="button">Brazil</button>
                     <button className="button">Kenya</button>
-                    <button className="button">Columbia</button>
+                    <button className="button">Columbia</button> */}
+                    
                 </div>
 
                 <div className={style.shops__shopping}>
                     <span>🛒</span>
-                    <span>Shopping </span>
+                    {/* <button>Shopping </button> */}
                     <b>{shopingBucket} $</b>
                 </div>
             </div>

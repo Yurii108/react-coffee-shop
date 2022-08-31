@@ -15,17 +15,18 @@ import NavMenu from './components/Nav-menu';
 class App extends Component {
   state = {
     data: [
-      { title: 'Solimo Coffee Beans 2 kg', prise: 10.73, buy: false, img: '/img/out-best/b-1.png', id: 1 },
-      { title: 'Presto Coffee Beans 1 kg', prise: 15.99, buy: true, img: '/img/out-best/b-2.png', id: 2 },
-      { title: 'AROMISTICO Coffee 1 kg', prise: 6.99, buy: false, img: '/img/out-best/b-3.png', id: 3 },
-      { title: 'Solimo Coffee Beans 2 kg', prise: 10.73, buy: false, img: '/img/out-best/b-1.png', id: 4 },
-      { title: 'Presto Coffee Beans 1 kg', prise: 15.99, buy: false, img: '/img/out-best/b-2.png', id: 5 },
-      { title: 'AROMISTICO Coffee 1 kg', prise: 6.99, buy: false, img: '/img/out-best/b-3.png', id: 6 }
+      { title: 'Solimo Coffee Beans 2 kg', made: 'Brazil', prise: 10.73, buy: false, img: '/img/out-best/b-1.png', id: 1 },
+      { title: 'Presto Coffee Beans 1 kg', made: 'Columbia', prise: 15.99, buy: true, img: '/img/out-best/b-2.png', id: 2 },
+      { title: 'AROMISTICO Coffee 1 kg', made: 'Kenya', prise: 6.99, buy: false, img: '/img/out-best/b-3.png', id: 3 },
+      { title: 'Solimo Coffee Beans 2 kg', made: 'Brazil', prise: 10.73, buy: false, img: '/img/out-best/b-1.png', id: 4 },
+      { title: 'Presto Coffee Beans 1 kg', made: 'Columbia', prise: 15.99, buy: false, img: '/img/out-best/b-2.png', id: 5 },
+      { title: 'AROMISTICO Coffee 1 kg', made: 'Brazil', prise: 6.99, buy: false, img: '/img/out-best/b-3.png', id: 6 }
     ],
     HeaderOurCoffeeOpened: true,
     HeaderMainOpened: false,
     shoping: 0,
-    term: ''
+    term: '',
+    filter: 'all'
 
   }
 
@@ -75,13 +76,35 @@ class App extends Component {
     this.setState({ term })
   }
 
+  filterProduct = (items, filter) => {
+    switch (filter) {
+      case 'brazil':
+        return items.filter(item => item.made === 'Brazil')
+      case 'сolumbia':
+        return items.filter(item => item.made === 'Columbia')
+      case 'kenya':
+        return items.filter(item => item.made === 'Kenya')
+      case 'shopping':
+        return items.filter(item => item.buy)
+      default:
+        return items;
+    }
+  }
+
+
+
+  onUpdateFilter = (filter) => {
+    this.setState({ filter })
+  }
+
+
+
 
   render() {
-    const { data, term, HeaderMainOpened, HeaderOurCoffeeOpened } = this.state;
-    const visibleData = this.searchProduct(data, term)
-    let shopingBucket = data.filter(item => item.buy)
-    .reduce((sum, item) => sum + item.prise,0);
-
+    const { data, term, filter, HeaderMainOpened, HeaderOurCoffeeOpened } = this.state;
+    const visibleData = this.filterProduct(this.searchProduct(data, term), filter)
+    const shopingBucket = data.filter(item => item.buy)
+      .reduce((sum, item) => sum + item.prise, 0);
 
     return (
       <>
@@ -98,6 +121,8 @@ class App extends Component {
           onToggleShopping={this.onToggleShopping}
           onUpdateSeach={this.onUpdateSeach}
           shopingBucket={shopingBucket}
+          // filter={filter}
+          onUpdateFilter={this.onUpdateFilter}
         />}
         {HeaderMainOpened && <OurBest />}
 

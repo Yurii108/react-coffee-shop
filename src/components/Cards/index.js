@@ -4,7 +4,7 @@ import './carts.scss'
 
 function Cards(props) {
 
-  const { img, title, prise, onToggleShopping, buy } = props;
+  const { img, title, made, prise, onToggleShopping, buy } = props;
 
   let active = 'product__button';
 
@@ -18,7 +18,7 @@ function Cards(props) {
         <img src={img} alt="product-1" />
       </div>
       <p>{title}</p>
-      <span>Brazil</span>
+      <span>{made}</span>
       <b>{prise}$</b>
       <button
         className={active}
