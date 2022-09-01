@@ -6,7 +6,6 @@ import MainDescSection from './components/Main-desc-section';
 import HeaderOurCoffee from './components/Header-our-coffee';
 import Goods from './components/Goods';
 import Shops from './components/Shops';
-import OurBest from './components/Our-best';
 import NavMenu from './components/Nav-menu';
 
 
@@ -115,16 +114,16 @@ class App extends Component {
         {HeaderOurCoffeeOpened && <Goods />}
         {HeaderMainOpened && <MainDescSection />}
 
-        {HeaderOurCoffeeOpened && <Shops
+        <Shops
           data={visibleData}
           onToggleShopping={this.onToggleShopping}
           onUpdateSeach={this.onUpdateSeach}
           shopingBucket={shopingBucket}
           filter={filter}
           onUpdateFilter={this.onUpdateFilter}
-        />}
-        {HeaderMainOpened && <OurBest />}
-
+          HeaderMainOpened={HeaderMainOpened}
+        />
+        
         <Footer />
       </>
     );
