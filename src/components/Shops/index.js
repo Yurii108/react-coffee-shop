@@ -61,7 +61,7 @@ const Shops = ({ data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateF
                 </div>
 
                 <div className="shops__shopping">
-                    <span>🛒</span>
+                    <span><img src="./img/shopping-icon.png" alt="shopping" /></span>
                     
                     <b>{buttonsShopping}</b>
                 </div>
