@@ -42,8 +42,9 @@ const Shops = (props) => {
    const buttonsFilter = buttons.slice(0, 4)
    const buttonsShopping = buttons.slice(4)
 
-   const activeShops = !HeaderMainOpened ? { display: '' } : { display: 'none' }
-   const activeBest = !HeaderMainOpened ? { display: 'none' } : { display: '' }
+   const activeShops = !HeaderMainOpened ? { display: '' } : { display: 'none' };
+   const activeBest = !HeaderMainOpened ? { display: 'none' } : { display: '' };
+   const elementsBest = elements.slice(0, 3);
 
    return (
       <>
@@ -62,7 +63,6 @@ const Shops = (props) => {
 
                <div className="shops__shopping">
                   <span><img src="./img/shopping-icon.png" alt="shopping" /></span>
-
                   <b>{buttonsShopping}</b>
                </div>
             </div>
@@ -76,7 +76,7 @@ const Shops = (props) => {
          <section className='best' style={activeBest}>
             <h2 className="subheader best__subheader">Our best</h2>
             <div className="best__all-products" >
-               {elements}
+               {elementsBest}
             </div>
          </section>
       </>
