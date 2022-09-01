@@ -1,5 +1,5 @@
 
-function NavMenu({onClickF, onClickS}) {
+function NavMenu({onClickF, onClickS, onHeaderPleasure}) {
     return (
         <nav className='nav header__nav'>
             <ul>
@@ -10,7 +10,7 @@ function NavMenu({onClickF, onClickS}) {
                     <span onClick={onClickF}>Coffee house</span>
                 </li>
                 <li><span onClick={onClickS} >Our coffee</span></li>
-                <li><span>For your pleasure</span></li>
+                <li><span onClick={onHeaderPleasure}>For your pleasure</span></li>
             </ul>
         </nav>
     )

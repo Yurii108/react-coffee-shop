@@ -1,11 +1,19 @@
-import styleHeader from './header-our-coffee.module.scss'
+import './header-our-coffee.scss'
 
-function HeaderOurCoffee() {
+function HeaderOurCoffee({HeaderPleasure}) {
+
+    const displayOne = !HeaderPleasure ? { display: '' } : { display: 'none' };
+    const displayTwo = !HeaderPleasure ? { display: 'none' } : { display: '' };
+
     return (
         <>
             <header className='header'>
-                <div className={styleHeader.header_our_coffee} style={{ display: '' }}>
-                    <h2 className={styleHeader.header_our_coffee__title}>Our Coffee</h2>
+                <div className='header_our_coffee' style={displayOne}>
+                    <h2 className='header_our_coffee__title'>Our Coffee</h2>
+                </div>
+
+                <div className='header_pleasure' style={displayTwo}>
+                    <h2 className='header_pleasure__title'>For your pleasure</h2>
                 </div>
             </header>
         </>

@@ -6,7 +6,7 @@ import Cards from "../Cards";
 
 
 const Shops = (props) => {
-   const { HeaderMainOpened, data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateFilter, filter } = props;
+   const { HeaderMainOpened, data, onToggleShopping, onUpdateSeach, shopingBucket, onUpdateFilter, filter, SearchMenu } = props;
 
    const elements = data.map(item => {
       const { id, ...itemsProps } = item;
@@ -44,14 +44,15 @@ const Shops = (props) => {
 
    const activeShops = !HeaderMainOpened ? { display: '' } : { display: 'none' };
    const activeBest = !HeaderMainOpened ? { display: 'none' } : { display: '' };
+   const activeSearsh = !SearchMenu ? { display: 'none' } : { display: '' };
    const elementsBest = elements.slice(0, 3);
 
    return (
       <>
-         <section className="shops" style={activeShops}>
-            <div className="shops__divider"></div>
+         <section className="shops">
+            <div className="shops__divider"style={activeShops}></div>
 
-            <div className="wrapper__search">
+            <div className="wrapper__search"style={activeSearsh}>
                <div className="shops__search">
                   <Search onUpdateSeach={onUpdateSeach} />
                </div>
@@ -68,7 +69,7 @@ const Shops = (props) => {
             </div>
 
 
-            <div className="shops__products" >
+            <div className="shops__products" style={activeShops}>
                {elements}
             </div>
          </section>

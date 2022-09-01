@@ -1,0 +1,32 @@
+
+.header_our_coffee {
+    min-height: 260px;
+    background: url('./desk-bg-3.png') center (center / cover) no-repeat;
+    padding: 160px 0 84px 0;
+  
+    &__title {
+      display: block;
+      margin: 0;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 0px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+
+  .header_pleasure {
+    min-height: 260px;
+    background: url('./desk-bg-4.png') center (center / cover) no-repeat;
+    padding: 160px 0 84px 0;
+  
+    &__title {
+      display: block;
+      margin: 0;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 0px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }

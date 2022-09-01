@@ -23,6 +23,8 @@ class App extends Component {
     ],
     HeaderOurCoffeeOpened: true,
     HeaderMainOpened: false,
+    HeaderPleasure: false,
+    SearchMenu: true,
     shoping: 0,
     term: '',
     filter: 'all'
@@ -36,14 +38,27 @@ class App extends Component {
   onClickOurCoffee = () => {
     this.setState({
       HeaderOurCoffeeOpened: true,
-      HeaderMainOpened: false
+      HeaderMainOpened: false,
+      HeaderPleasure: false,
+      SearchMenu: true,
     })
   }
 
   onHeaderMain = () => {
     this.setState({
       HeaderOurCoffeeOpened: false,
-      HeaderMainOpened: true
+      HeaderMainOpened: true,
+      HeaderPleasure: false,
+      SearchMenu: false,
+    })
+  }
+
+  onHeaderPleasure = () => {
+    this.setState({
+      HeaderOurCoffeeOpened: true,
+      HeaderMainOpened: false,
+      HeaderPleasure: true,
+      SearchMenu: false,
     })
   }
 
@@ -89,8 +104,6 @@ class App extends Component {
     }
   }
 
-
-
   onUpdateFilter = (filter) => {
     this.setState({ filter })
   }
@@ -99,19 +112,21 @@ class App extends Component {
 
 
   render() {
-    const { data, term, filter, HeaderMainOpened, HeaderOurCoffeeOpened } = this.state;
+    const { data, term, filter, HeaderMainOpened, HeaderOurCoffeeOpened, HeaderPleasure, SearchMenu } = this.state;
     const visibleData = this.filterProduct(this.searchProduct(data, term), filter)
     const shopingBucket = data.filter(item => item.buy)
       .reduce((sum, item) => sum + item.prise, 0) + ' $';
 
     return (
       <>
-        <NavMenu onClickS={this.onClickOurCoffee} onClickF={this.onHeaderMain} />
+        <NavMenu onClickS={this.onClickOurCoffee} onClickF={this.onHeaderMain} onHeaderPleasure={this.onHeaderPleasure}/>
 
         {HeaderMainOpened && <HeaderMain />}
-        {HeaderOurCoffeeOpened && <HeaderOurCoffee />}
+        {HeaderOurCoffeeOpened && <HeaderOurCoffee 
+        HeaderPleasure={HeaderPleasure}/>}
 
-        {HeaderOurCoffeeOpened && <Goods />}
+        {HeaderOurCoffeeOpened && <Goods 
+        HeaderPleasure={HeaderPleasure}/>}
         {HeaderMainOpened && <MainDescSection />}
 
         <Shops
@@ -122,6 +137,7 @@ class App extends Component {
           filter={filter}
           onUpdateFilter={this.onUpdateFilter}
           HeaderMainOpened={HeaderMainOpened}
+          SearchMenu={SearchMenu}
         />
         
         <Footer />
