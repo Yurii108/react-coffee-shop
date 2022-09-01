@@ -31,22 +31,18 @@
     width: 35px;
     height: 25px;
     right: 23px;
-    bottom: 16px;
-    font-family: 'Merienda';
     font-weight: 700;
     font-size: 20px;
-    background-color: rgba(161, 156, 0, 0);
-    border: 1px solid rgba(0, 0, 0, 0.512);
-    border-radius: 5px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 0px;
+    border: 0;
     cursor: pointer;
     line-height: 16px;
-    transition: all .3s;
+    transition: all .2s;
 
     &:hover {
-      background-color: #555555a9;
-      color: aliceblue;
-      border: 1px solid rgba(0, 0, 0, .5);
-      font-weight: 400;
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.45);
     }
 
     &_active {
@@ -54,21 +50,16 @@
       width: 35px;
       height: 25px;
       right: 23px;
-      bottom: 16px;
-      font-family: 'Merienda';
       font-weight: 700;
       font-size: 20px;
-      background-color: rgba(161, 156, 0, 0);
-      border: 1px solid rgba(0, 0, 0, 0.512);
-      border-radius: 5px;
+      background: #ffffff;
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+      border-radius: 0px;
+      border: 0;
       cursor: pointer;
       line-height: 16px;
-      transition: all .3s;
-
-      background-color: #555555;
-      color: aliceblue;
-      font-weight: 400;
-      border: 1px solid rgba(0, 0, 0, .9);
+      transition: all .2s;
+    
     }
   }
 
