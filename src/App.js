@@ -19,7 +19,10 @@ class App extends Component {
       { title: 'AROMISTICO Coffee 1 kg', made: 'Kenya', prise: 6.99, buy: false, img: '/img/out-best/b-3.png', id: 3 },
       { title: 'Solimo Coffee Beans 2 kg', made: 'Brazil', prise: 10.73, buy: false, img: '/img/out-best/b-1.png', id: 4 },
       { title: 'Presto Coffee Beans 1 kg', made: 'Columbia', prise: 15.99, buy: false, img: '/img/out-best/b-2.png', id: 5 },
-      { title: 'AROMISTICO Coffee 1 kg', made: 'Brazil', prise: 6.99, buy: false, img: '/img/out-best/b-3.png', id: 6 }
+      { title: 'AROMISTICO Coffee 1 kg', made: 'Brazil', prise: 6.99, buy: false, img: '/img/out-best/b-3.png', id: 6 },
+      { title: 'AROMISTICO Coffee 1 kg', made: 'Kenya', prise: 6.99, buy: false, img: '/img/out-best/b-3.png', id: 7 },
+      { title: 'Solimo Coffee Beans 2 kg', made: 'Brazil', prise: 10.73, buy: false, img: '/img/out-best/b-1.png', id: 8 },
+      { title: 'Presto Coffee Beans 1 kg', made: 'Columbia', prise: 15.99, buy: false, img: '/img/out-best/b-2.png', id: 9 }
     ],
     HeaderOurCoffeeOpened: true,
     HeaderMainOpened: false,
