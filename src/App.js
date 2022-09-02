@@ -113,6 +113,7 @@ class App extends Component {
 
   render() {
     const { data, term, filter, HeaderMainOpened, HeaderOurCoffeeOpened, HeaderPleasure, SearchMenu } = this.state;
+
     const visibleData = this.filterProduct(this.searchProduct(data, term), filter)
     const shopingBucket = data.filter(item => item.buy)
       .reduce((sum, item) => sum + item.prise, 0) + ' $';
@@ -140,7 +141,7 @@ class App extends Component {
           SearchMenu={SearchMenu}
         />
         
-        <Footer />
+        <Footer onClickS={this.onClickOurCoffee} onClickF={this.onHeaderMain} onHeaderPleasure={this.onHeaderPleasure}/>
       </>
     );
   }

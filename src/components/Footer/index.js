@@ -1,4 +1,4 @@
-function Footer() {
+function Footer({onClickF, onClickS, onHeaderPleasure}) {
     return (
         <footer className='footer'>
             <div className="footer-nav-wrraper">
@@ -8,10 +8,13 @@ function Footer() {
                             <div className="logo_img">
                                 <img src='/img/bg/coffee-beans-black.svg' alt='logo' />
                             </div>
-                            <span>Coffee house</span>
-                    </li>
-                    <li><span>Our coffee</span></li>
-                    <li><span>For your pleasure</span></li>
+                            <span className="button_nav" onClick={onClickF}>
+                                Coffee house</span>
+                        </li>
+                        <li><span className="button_nav" onClick={onClickS} >
+                            Our coffee</span></li>
+                        <li><span  className="button_nav"onClick={onHeaderPleasure}>
+                            For your pleasure</span></li>
                     </ul>
                 </nav>
             </div>
