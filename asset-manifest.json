@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-coffee-shop/static/css/main.48a0d747.css",
-    "main.js": "/react-coffee-shop/static/js/main.20f13466.js",
+    "main.js": "/react-coffee-shop/static/js/main.33d527ec.js",
     "static/media/desk-bg-2.png": "/react-coffee-shop/static/media/desk-bg-2.0a7b9cd461a37b4bc66a.png",
     "static/media/desk-bg.png": "/react-coffee-shop/static/media/desk-bg.7a74b677290e03ea84b5.png",
     "static/media/desk-bg-4.png": "/react-coffee-shop/static/media/desk-bg-4.59986f0346eb27beb34b.png",
     "static/media/desk-bg-3.png": "/react-coffee-shop/static/media/desk-bg-3.44026f6b439577e2b178.png",
     "index.html": "/react-coffee-shop/index.html",
     "main.48a0d747.css.map": "/react-coffee-shop/static/css/main.48a0d747.css.map",
-    "main.20f13466.js.map": "/react-coffee-shop/static/js/main.20f13466.js.map"
+    "main.33d527ec.js.map": "/react-coffee-shop/static/js/main.33d527ec.js.map"
   },
   "entrypoints": [
     "static/css/main.48a0d747.css",
-    "static/js/main.20f13466.js"
+    "static/js/main.33d527ec.js"
   ]
 }
