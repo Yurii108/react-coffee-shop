@@ -14,15 +14,15 @@ import NavMenu from './components/Nav-menu';
 class App extends Component {
   state = {
     data: [
-      { title: 'Solimo Coffee Beans 2 kg', made: 'Brazil', prise: 10.73, buy: false, img: '/img/out-best/b-1.png', id: 1 },
-      { title: 'Presto Coffee Beans 1 kg', made: 'Columbia', prise: 15.99, buy: true, img: '/img/out-best/b-2.png', id: 2 },
-      { title: 'AROMISTICO Coffee 1 kg', made: 'Kenya', prise: 6.99, buy: false, img: '/img/out-best/b-3.png', id: 3 },
-      { title: 'Solimo Coffee Beans 2 kg', made: 'Brazil', prise: 10.73, buy: false, img: '/img/out-best/b-1.png', id: 4 },
-      { title: 'Presto Coffee Beans 1 kg', made: 'Columbia', prise: 15.99, buy: false, img: '/img/out-best/b-2.png', id: 5 },
-      { title: 'AROMISTICO Coffee 1 kg', made: 'Brazil', prise: 6.99, buy: false, img: '/img/out-best/b-3.png', id: 6 },
-      { title: 'AROMISTICO Coffee 1 kg', made: 'Kenya', prise: 6.99, buy: false, img: '/img/out-best/b-3.png', id: 7 },
-      { title: 'Solimo Coffee Beans 2 kg', made: 'Brazil', prise: 10.73, buy: false, img: '/img/out-best/b-1.png', id: 8 },
-      { title: 'Presto Coffee Beans 1 kg', made: 'Columbia', prise: 15.99, buy: false, img: '/img/out-best/b-2.png', id: 9 }
+      { title: 'Solimo Coffee Beans 2 kg', made: 'Brazil', prise: 10.73, buy: false, img: 'img/out-best/b-1.png', id: 1 },
+      { title: 'Presto Coffee Beans 1 kg', made: 'Columbia', prise: 15.99, buy: true, img: 'img/out-best/b-2.png', id: 2 },
+      { title: 'AROMISTICO Coffee 1 kg', made: 'Kenya', prise: 6.99, buy: false, img: 'img/out-best/b-3.png', id: 3 },
+      { title: 'Solimo Coffee Beans 2 kg', made: 'Brazil', prise: 10.73, buy: false, img: 'img/out-best/b-1.png', id: 4 },
+      { title: 'Presto Coffee Beans 1 kg', made: 'Columbia', prise: 15.99, buy: false, img: 'img/out-best/b-2.png', id: 5 },
+      { title: 'AROMISTICO Coffee 1 kg', made: 'Brazil', prise: 6.99, buy: false, img: 'img/out-best/b-3.png', id: 6 },
+      { title: 'AROMISTICO Coffee 1 kg', made: 'Kenya', prise: 6.99, buy: false, img: 'img/out-best/b-3.png', id: 7 },
+      { title: 'Solimo Coffee Beans 2 kg', made: 'Brazil', prise: 10.73, buy: false, img: 'img/out-best/b-1.png', id: 8 },
+      { title: 'Presto Coffee Beans 1 kg', made: 'Columbia', prise: 15.99, buy: false, img: 'img/out-best/b-2.png', id: 9 }
     ],
     HeaderOurCoffeeOpened: true,
     HeaderMainOpened: false,
@@ -119,7 +119,7 @@ class App extends Component {
 
     const visibleData = this.filterProduct(this.searchProduct(data, term), filter)
     const shopingBucket = data.filter(item => item.buy)
-      .reduce((sum, item) => sum + item.prise, 0) + ' $';
+      .reduce((sum, item) => sum + item.prise, 0).toFixed(2)  + ' $';
 
     return (
       <>

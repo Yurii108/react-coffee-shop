@@ -3,7 +3,7 @@ import './goods.scss'
 
 function Goods({ HeaderPleasure }) {
 
-  const imgSrc = !HeaderPleasure ? "/img/Mask.png" : "/img/Mask-grey.png"
+  const imgSrc = !HeaderPleasure ? "img/Mask.png" : "img/Mask-grey.png"
   const subheader = !HeaderPleasure ? 'About our beans' : 'About our goods'
 
   return (
@@ -19,7 +19,7 @@ function Goods({ HeaderPleasure }) {
           <div className="logo goods__logo">
             <div className="logo_divider"></div>
             <div className="logo_img">
-              <img src='/img/bg/coffee-beans-black-sec.svg' alt='logo' />
+              <img src='img/bg/coffee-beans-black-sec.svg' alt='logo' />
             </div>
             <div className="logo_divider"></div>
           </div>

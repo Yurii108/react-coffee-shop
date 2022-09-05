@@ -4,7 +4,7 @@ function MainDescSection() {
       <h2 className="subheader about__subheader">About Us</h2>
       <div className="logo about__logo">
         <div className="logo_divider"></div>
-        <div className="logo_img"><img src='/img/bg/coffee-beans-black-sec.svg' alt='logo' /></div>
+        <div className="logo_img"><img src='img/bg/coffee-beans-black-sec.svg' alt='logo' /></div>
         <div className="logo_divider"></div>
       </div>
 

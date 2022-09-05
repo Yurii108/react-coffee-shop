@@ -7,7 +7,7 @@ function NavMenu({onClickF, onClickS, onHeaderPleasure}) {
             <ul>
                 <li>
                     <div className="logo_img">
-                        <img src='./img/bg/coffee-beans-white.svg' alt='logo' />
+                        <img src='img/bg/coffee-beans-white.svg' alt='logo' />
                     </div>
                     <span className="button_nav" onClick={onClickF}>Coffee house</span>
                 </li>

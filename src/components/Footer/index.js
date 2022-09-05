@@ -6,7 +6,7 @@ function Footer({onClickF, onClickS, onHeaderPleasure}) {
                     <ul>
                         <li>
                             <div className="logo_img">
-                                <img src='/img/bg/coffee-beans-black.svg' alt='logo' />
+                                <img src='img/bg/coffee-beans-black.svg' alt='logo' />
                             </div>
                             <span className="button_nav" onClick={onClickF}>
                                 Coffee house</span>
@@ -21,7 +21,7 @@ function Footer({onClickF, onClickS, onHeaderPleasure}) {
 
             <div className="logo footer__logo">
                 <div className="logo_divider"></div>
-                <div className="logo_img"><img src='/img/bg/coffee-beans-black-sec.svg' alt='logo' /></div>
+                <div className="logo_img"><img src='img/bg/coffee-beans-black-sec.svg' alt='logo' /></div>
                 <div className="logo_divider"></div>
             </div>
         </footer>
