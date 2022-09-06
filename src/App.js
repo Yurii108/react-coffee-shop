@@ -24,10 +24,10 @@ class App extends Component {
       { title: 'Solimo Coffee Beans 2 kg', made: 'Brazil', prise: 10.73, buy: false, img: 'img/out-best/b-1.png', id: 8 },
       { title: 'Presto Coffee Beans 1 kg', made: 'Columbia', prise: 15.99, buy: false, img: 'img/out-best/b-2.png', id: 9 }
     ],
-    HeaderOurCoffeeOpened: true,
-    HeaderMainOpened: false,
+    HeaderOurCoffeeOpened: false,
+    HeaderMainOpened: true,
     HeaderPleasure: false,
-    SearchMenu: true,
+    SearchMenu: false,
     shoping: 0,
     term: '',
     filter: 'all'
